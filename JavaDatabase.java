@@ -24,8 +24,9 @@ public class JavaDatabase {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String nama = rs.getString("nama");
+                String alamat = rs.getString("alamat");
                 int umur = rs.getInt("umur");
-                Data data = new Data(id, nama, umur);
+                Data data = new Data(id, nama, umur, alamat);
                 dataList.add(data);
             }
 
@@ -49,16 +50,18 @@ public class JavaDatabase {
 class Data {
     private int id;
     private String nama;
+    private String alamat;
     private int umur;
 
-    public Data(int id, String nama, int umur) {
+    public Data(int id, String nama, String alamat, int umur) {
         this.id = id;
         this.nama = nama;
         this.umur = umur;
+        this.alamat = alamat;
     }
 
     @Override
     public String toString() {
-        return "Data [id=" + id + ", nama=" + nama + ", umur=" + umur + "]";
+        return "Data [id=" + id + ", nama=" + nama + ", umur=" + umur + ", tempat tinggal=" + alamat"]";
     }
 }
