@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-package JavaDatabase;
+package internal.database;
 
 public class JavaDatabase {
     public static void main(String[] args) {
